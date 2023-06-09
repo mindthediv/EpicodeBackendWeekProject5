@@ -12,11 +12,14 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.AuthenticationEntryPoint;
 import org.springframework.security.web.SecurityFilterChain;
 
+// SECURITY ANCORA DA IMPLEMENTARE (bozza)
+
+
 @Configuration
 @EnableWebSecurity
 public class WebSecurityConfig {
     @Autowired private AuthenticationEntryPoint authEntryPoint;
-
+    
     @Autowired public void globalConfig(AuthenticationManagerBuilder auth) throws Exception {
         auth
         .inMemoryAuthentication()
